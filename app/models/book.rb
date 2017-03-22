@@ -4,7 +4,7 @@ class Book < ActiveRecord::Base
 	
 	validates :title, presence:true, format: {with: /[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]/}
 	validates :author, presence:true, format: {with: /[A-Z][A-Z][A-Z][A-Z][0-9][0-9][0-9][0-9]/}
-	validates :price, presence:true, numericality: true
+	validates :price, presence:true, numericality: { only_integer: true }
 	validates :description, presence:true
 	validates :created_at, presence:true
 	validates :updated_at, presence:true
