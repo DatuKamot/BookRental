@@ -1,0 +1,8 @@
+<%= simple_form_for([@book, @book.reservations.build]) do |f| %>
+	<%= f.input :name %>
+	<%= f.input :email %>
+	<%= f.input :address %>
+	<%= f.input :contact_nmber %>
+	<%= f.input :date_of_reservation %>
+	<%= f.button :submit %>
+	<% end %>
