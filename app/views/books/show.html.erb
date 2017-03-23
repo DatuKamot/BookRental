@@ -8,9 +8,13 @@
 	
 	</div>
 	<% if user_signed_in? %>
-	<ul class="nav navbar-nav navbar-right">
-	<li><%= link_to "Rent this Book?", new_book_path %></li>	</ul>
-	<%end%>
+			<ul class="nav navbar-nav navbar-right">
+			<%= form_tag "books/:id/popup" do %>
+	  			 <button>Rent this Book?</button>	
+
+				</ul>
+				<%end%>
+				<%end%>
 	<div class="col-md-8">
 
 	<div class="book-info">
